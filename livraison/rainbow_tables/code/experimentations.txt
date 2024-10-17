@@ -1,0 +1,187 @@
+(échantillon de tests originalements écrit par Christopher Baudoin)
+
+Voici les échantillons de tests de bases conçus.
+
+La métric à chercher est le nombre de réussite / la quantitée de mot de passe a craquer.
+
+La quantitée de mot de passe a craquer sera définie à 1% si la taille de mdp ne change pas, 10000 sinon.
+
+Les tests seront fait sur un paramètre principal, avec les deux autres paramètres en "pivot"
+
+C : nombre de couleurs de la table |  T : taille de la table (nombre de mots de passe) | L : longueur des mots de passe
+
+Faire tout ça de plus sur plusieurs fonctions de hachages de taille différentes.
+
+
+
+### Test nombre de couleurs : ###
+
+On fixe les paramètres suivants : taille de la table (5000), longueur des mots de passe (5)
+	⁃	C(20) T(5000) L(5)
+	⁃	C(50) T(5000) L(5)
+	⁃	C(100) T(5000) L(5)
+	⁃	C(500) T(5000) L(5)
+	⁃	C(1000) T(5000) L(5)
+	⁃	C(2000) T(5000) L(5)
+	⁃	C(5000) T(5000) L(5)
+
+« Efficacité de la rainbowtable en fonction du nombre de couleurs (taille de table (5000) et longueur des mots de passe (5) fixés) »
+
+On modifie le paramètre suivant : longueur des mots de passe (7)
+	⁃	C(20) T(5000) L(7)
+	⁃	C(50) T(5000) L(7)
+	⁃	C(100) T(5000) L(7)
+	⁃	C(500) T(5000) L(7)
+	⁃	C(1000) T(5000) L(7)
+	⁃	C(2000) T(5000) L(7)
+	⁃	C(5000) T(5000) L(7)
+
+« Efficacité de la rainbowtable en fonction du nombre de couleurs (taille de table (5000) et longueur des mots de passe (7) fixés) »
+
+On modifie le paramètre suivant : longueur des mots de passe (9)
+	⁃	C(20) T(5000) L(9)
+	⁃	C(50) T(5000) L(9)
+	⁃	C(100) T(5000) L(9)
+	⁃	C(500) T(5000) L(9)
+	⁃	C(1000) T(5000) L(9)
+	⁃	C(2000) T(5000) L(9)
+	⁃	C(5000) T(5000) L(9)
+
+« Efficacité de la rainbowtable en fonction du nombre de couleurs (taille de table (5000) et longueur des mots de passe (9) fixés) »
+
+On modifie le paramètre suivant : taille de la table(10000)
+	⁃	C(20) T(10000) L(5)
+	⁃	C(50) T(10000) L(5)
+	⁃	C(100) T(10000) L(5)
+	⁃	C(500) T(10000) L(5)
+	⁃	C(1000) T(10000) L(5)
+	⁃	C(2000) T(10000) L(5)
+	⁃	C(5000) T(10000) L(5)
+
+« Efficacité de la rainbowtable en fonction du nombre de couleurs (taille de table (10000) et longueur des mots de passe (5) fixés) »
+
+On modifie le paramètre suivant : taille de la table(50000)
+	⁃	C(20) T(50000) L(5)
+	⁃	C(50) T(50000) L(5)
+	⁃	C(100) T(50000) L(5)
+	⁃	C(500) T(50000) L(5)
+	⁃	C(1000) T(50000) L(5)
+	⁃	C(2000) T(50000) L(5)
+	⁃	C(5000) T(50000) L(5)
+
+« Efficacité de la rainbowtable en fonction du nombre de couleurs (taille de table (50000) et longueur des mots de passe (5) fixés) »
+
+
+### Test de la taille de la RainbowTable : ###
+
+1000 5000 10000 20000 50000 200000 1000000
+
+On fixe les paramètres suivants : nombre de couleurs (50), longueur des mots de passe (5)
+	⁃	C(50) T(1000) L(5)
+	⁃	C(50) T(5000) L(5)
+	⁃	C(50) T(10000) L(5)
+	⁃	C(50) T(20000) L(5)
+	⁃	C(50) T(50000) L(5)
+	⁃	C(50) T(200000) L(5)
+	⁃	C(50) T(1000000) L(5)
+
+« Efficacité de la rainbowtable en fonction de la taille de la table (nombre de couleurs (50) et longueur des mots de passe (5) fixés) »
+
+On modifie le paramètre suivant : longueur des mots de passe (7)
+	⁃	C(50) T(1000) L(7)
+	⁃	C(50) T(5000) L(7)
+	⁃	C(50) T(10000) L(7)
+	⁃	C(50) T(20000) L(7)
+	⁃	C(50) T(50000) L(7)
+	⁃	C(50) T(200000) L(7)
+	⁃	C(50) T(1000000) L(7)
+
+« Efficacité de la rainbowtable en fonction de la taille de la table (nombre de couleurs (50) et longueur des mots de passe (7) fixés) »
+
+On modifie le paramètre suivant : longueur des mots de passe (9)
+	⁃	C(50) T(1000) L(9)
+	⁃	C(50) T(5000) L(9)
+	⁃	C(50) T(10000) L(9)
+	⁃	C(50) T(20000) L(9)
+	⁃	C(50) T(50000) L(9)
+	⁃	C(50) T(200000) L(9)
+	⁃	C(50) T(1000000) L(9)
+
+« Efficacité de la rainbowtable en fonction de la taille de la table (nombre de couleurs (50) et longueur des mots de passe (9) fixés) »
+
+On modifie le paramètre suivant : nombre de couleurs (500)
+	⁃	C(500) T(1000) L(5)
+	⁃	C(500) T(5000) L(5)
+	⁃	C(500) T(10000) L(5)
+	⁃	C(500) T(20000) L(5)
+	⁃	C(500) T(50000) L(5)
+	⁃	C(500) T(200000) L(5)
+	⁃	C(500) T(1000000) L(5)
+
+« Efficacité de la rainbowtable en fonction de la taille de la table (nombre de couleurs (500) et longueur des mots de passe (5) fixés) »
+
+On modifie le paramètre suivant : nombre de couleurs (2000)
+	⁃	C(2000) T(1000) L(5)
+	⁃	C(2000) T(5000) L(5)
+	⁃	C(2000) T(10000) L(5)
+	⁃	C(2000) T(20000) L(5)
+	⁃	C(2000) T(50000) L(5)
+	⁃	C(2000) T(200000) L(5)
+	⁃	C(2000) T(1000000) L(5)
+
+« Efficacité de la rainbowtable en fonction de la taille de la table (nombre de couleurs (2000) et longueur des mots de passe (5) fixés) »
+
+### Test de la longueur des mots de passe : ###
+
+On fixe les paramètres suivants : nombre de couleurs (100) taille de la table (10000)
+	⁃	C(100) T(10000) L(3)
+	⁃	C(100) T(10000) L(4)
+	⁃	C(100) T(10000) L(5)
+	⁃	C(100) T(10000) L(6)
+	⁃	C(100) T(10000) L(7)
+	⁃	C(100) T(10000) L(8)
+	⁃	C(100) T(10000) L(9)
+
+« Efficacité de la rainbowtable en fonction de la longueur des mots de passe (nombre de couleurs (100) et taille de la table (10000) fixés) »
+
+On modifie le paramètre suivant : nombre de couleurs (1000)
+	⁃	C(1000) T(10000) L(3)
+	⁃	C(1000) T(10000) L(4)
+	⁃	C(1000) T(10000) L(5)
+	⁃	C(1000) T(10000) L(6)
+	⁃	C(1000) T(10000) L(7)
+	⁃	C(1000) T(10000) L(8)
+	⁃	C(1000) T(10000) L(9)
+
+« Efficacité de la rainbowtable en fonction de la longueur des mots de passe (nombre de couleurs (1000) et taille de la table (10000) fixés) »
+
+On modifie le paramètre suivant : nombre de couleurs (5000)
+	⁃	C(5000) T(10000) L(3)
+	⁃	C(5000) T(10000) L(4)
+	⁃	C(5000) T(10000) L(5)
+	⁃	C(5000) T(10000) L(6)
+	⁃	C(5000) T(10000) L(7)
+	⁃	C(5000) T(10000) L(8)
+	⁃	C(5000) T(10000) L(9)
+
+« Efficacité de la rainbowtable en fonction de la longueur des mots de passe (nombre de couleurs (5000) et taille de la table (10000) fixés) »
+
+On modifie le paramètre suivant : taille de la table(5000)
+	⁃	C(100) T(5000) L(3)
+	⁃	C(100) T(5000) L(4)
+	⁃	C(100) T(5000) L(5)
+	⁃	C(100) T(5000) L(6)
+	⁃	C(100) T(5000) L(7)
+	⁃	C(100) T(5000) L(8)
+	⁃	C(100) T(5000) L(9)
+
+« Efficacité de la rainbowtable en fonction de la longueur des mots de passe (nombre de couleurs (100) et taille de la table (5000) fixés) »
+
+On modifie le paramètre suivant : taille de la table(100000)
+	⁃	C(100) T(100000) L(3)
+	⁃	C(100) T(100000) L(4)
+	⁃	C(100) T(100000) L(5)
+	⁃	C(100) T(100000) L(6)
+	⁃	C(100) T(100000) L(7)
+	⁃	C(100) T(100000) L(8)
+	⁃	C(100) T(100000) L(9)

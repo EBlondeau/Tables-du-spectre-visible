@@ -1,0 +1,19 @@
+
+Lire un fichier:
+1)classe BufferedReader:
+BufferedReader(Reader in, int sz) // Crée un flux mis en tampon pour la lecture de symboles. Il utilise la taille de mémoire tampon spécifiée
+ mark(int readAheadLimit) // Marque la position dans le flux
+String	readLine() // Ligne suivante
+flush() // Envoie les données de la mémoire tampon au Writer
+newLine() // Passe à une nouvelle ligne
+
+
+
+2) avec SCanner:
+hasNext(): verifie si une autre ligne existe.
+nextLine(): lit la ligne donee
+
+//Pour écrire à la suite du fichier, il faut utiliser la commande suivante
+Files.write(fichier, ligne, Charset.forName(UTF-8), StandardOpenOption.APPEND);
+//La commande suivante ajoute les nouvelles données à la fin du fichier
+Files.write(fichier, donnees, StandardOpenOption.APPEND);

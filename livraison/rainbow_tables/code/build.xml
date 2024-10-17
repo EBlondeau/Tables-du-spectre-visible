@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<project name="code" default="compile" basedir=".">
+
+<property name="projet.sources.dir" value="src"/>
+<property name="projet.bin.dir" value="bin/"/>
+<property name="projet.doc.dir" value="doc"/>
+<property name="projet.rTables.dir" value="../data/rainbowtables"/>
+<property name="projet.exp.dir" value="../experimentations/data"/>
+
+
+<path id="projet.classpath">
+	<pathelement location="${projet.bin.dir}" />
+</path>
+
+<target name="compile" description="Compilation des classes" depends="prepare">
+	<javac srcdir="${projet.sources.dir}" destdir="${projet.bin.dir}" debug="on" optimize="off" deprecation="on" includeantruntime="false">
+		<classpath refid="projet.classpath"/>
+	</javac>
+</target>
+
+<target name="prepare" description="Compilation des classes" depends="clean">
+	<mkdir dir="${projet.bin.dir}" />
+	<mkdir dir="${projet.rTables.dir}" />
+	<mkdir dir="${projet.exp.dir}" />
+</target>
+
+<target name="clean">
+  <echo>=== CLEAN ===</echo>
+  <delete failonerror="false" includeEmptyDirs="true">
+    <fileset dir="${projet.doc.dir}" includes="**/*"/>
+	<fileset dir="${projet.bin.dir}" includes="**/*"/>
+  </delete>
+</target>
+
+<target name="cleanExp" >
+  <echo>=== CLEAN ===</echo>
+  <delete includeEmptyDirs="true">
+    <fileset dir="${projet.rTables.dir}" includes="**/*"/>
+	<fileset dir="${projet.exp.dir}" includes="**/*"/>
+  </delete>
+</target>
+
+
+
+<target name="runAttack" description="execution" depends="compile">
+	<java classname="rainbow_table_attack.Main" fork="true">
+		<classpath refid="projet.classpath"/>
+	</java>
+</target>
+
+<target name="runDemoCreation" description="execution" depends="compile">
+	<java classname="rainbow_tables.demos.DemoCreation" fork="true">
+		<classpath refid="projet.classpath"/>
+	</java>
+</target>
+
+<target name="runDemoReduction" description="execution" depends="compile">
+	<java classname="rainbow_tables.demos.DemoReductionHash" fork="true">
+		<classpath refid="projet.classpath"/>
+	</java>
+</target>
+
+<target name="runTestParse" description="execution" depends="compile">
+	<java classname="rainbow_table_attack.TestRainbowStruct" fork="true">
+		<classpath refid="projet.classpath"/>
+	</java>
+</target>
+
+<target name="runExp" description="execution" depends="compile">
+	<java classname="exp_scripts.Main" fork="true">
+		<classpath refid="projet.classpath"/>
+	</java>
+</target>
+
+<target name="runReductionTests" description="execution" depends="compile">
+	<java classname="rainbow_tables.reduction.Main" fork="true">
+		<classpath refid="projet.classpath"/>
+	</java>
+</target>
+
+<target name="runHashTests" description="execution" depends="compile">
+	<java classname="rainbow_tables.hashfuncs.Main" fork="true">
+		<classpath refid="projet.classpath"/>
+	</java>
+</target>
+
+<target name="runTest" description="execution" depends="compile">
+	<java classname="rainbow_tables.Test" fork="true">
+		<classpath refid="projet.classpath"/>
+	</java>
+</target>
+
+<target name="javadoc">
+	<javadoc sourcepath="src" destdir="doc" encoding="utf8">
+	<fileset dir="src" defaultexcludes="yes">
+		<include name="**.java" />
+	</fileset>
+	</javadoc>
+</target>
+
+</project>

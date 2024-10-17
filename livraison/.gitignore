@@ -1,0 +1,11 @@
+**/bin/
+**/dist/
+**/.classpath
+**/.project
+**/.vscode
+.metadata
+**/lib
+**/experimentations/data/**
+**/data/rainbowtables/**
+**/experimentations/shared_data/**/graphs
+**/doc
